@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="/../css/style.css">
+		<link rel="stylesheet" type="text/css" href="/../css/structure.css">
+	</head>
+	<body>
+		<template id="msgTemplate">
+			<div class="message">
+				<h3 class="messageSender">Sender</h3>
+				<span class="messageContent">Message Content</span>
+			</div>
+		</template>
+		<template id="warningTemplate">
+			<div class="warning">
+				<h3 class="warningTitle">Title</h3>
+				<span class="warningContent">Warning Content</span>
+				<button class="close">OK</button>
+			</div>
+		</template>
+		<template id="errorTemplate">
+			<div class="error">Error</div>
+		</template>
+		<template id="changeTemplate">
+			<div class="changeText">
+				<h3 class="changeTitle">Change</h3>
+				<input type="text" class="changeInput"></input>
+				<button class="sendChange">Change</button>
+				<button class="close">Cancel</button>
+			</div>
+		</template>
+		<template id="buttonTemplate">
+			<button class="tempButton"></button>
+		</template>
+	
+		<div id="cont">
+			<h1>Room Name</h1>
+			<div id="player1Cont" class="playerCont">
+				<svg id="player1svgToken"></svg>
+				<span class="playerNumber">Player 1: </span>
+				<span class="playerName">Name</span>
+			</div>
+			<div id="player2Cont" class="playerCont">
+				<svg id="player2svgToken"></svg>
+				<span class="playerNumber">Player 2: </span>
+				<span class="playerName">Name</span>
+			</div>
+			<h2 id="statusTitle">Status Here</h2>
+			<div id="svgCont">
+				<svg id="board"></svg>
+			</div>
+			<div id="chat">
+				<div id="usersCount">0 users</div>
+				<div id="messageCont"></div>
+				<div id="inputCont">
+					<input type="text" id="messageInput"></input>
+					<button id="sendMessage">Send</button>
+				</div>
+				<button id="changeName">Change Name</button>
+				<button id="changeRoom">Change Room</button>
+			</div>
+		</div>
+		
+		<canvas hidden width="16" height="16"></canvas>
+		<script type="module" src="../js/ui.js"></script>
+	</body>
+</html>

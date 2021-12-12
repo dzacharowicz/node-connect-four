@@ -1,0 +1,24 @@
+{
+  "name": "connect-four-game",
+  "version": "1.0.0",
+  "description": "Connect-four online game using node.js, websockets and mongodb",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "connect",
+    "four",
+    "nodejs",
+    "node",
+    "websocket",
+    "mongodb",
+    "js"
+  ],
+  "author": "Dor",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

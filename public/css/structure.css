@@ -1,0 +1,211 @@
+@media screen and (min-width: 600px) and (min-width: 500px) {
+	/* big screen */
+	#cont {
+		gap: 10px;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: "h1 h1" "player1Cont player2Cont" "statusTitle statusTitle" "svgCont chat";
+	}
+	
+	h1 {
+		text-align: center;
+		font-size: 10vh;
+		margin: 0 30px;
+	}
+	
+	.playerCont {
+		font-size: 5vh;
+		text-align: center;
+	}
+	
+	.playerCont svg {
+		width: 4vh;
+		height: 4vh;
+	}
+	
+	#statusTitle {
+		text-align: center;
+		font-size: 4vh;
+	}
+	
+	#statusTitle button {
+		font-size: 3vh;
+		padding: 4px;
+	}
+	
+	#svgCont {
+		border: solid 1px;
+		border-color: darkblue cornflowerblue cornflowerblue darkblue;
+		width: 56vh;
+		height: 64vh;
+		justify-self: right;
+	}
+	
+	#chat {
+		height: 64vh;
+		width: 56vh;
+		gap: 3px;
+		padding: 3px;
+		grid-template-rows: 1.4em 1fr 1.4em 1.4em;
+		border-radius: 4px;
+	}
+	
+	.message h3, .message .messageContent {
+		margin: 3px;
+		font-size: 1em;
+	}
+	
+	.warning, .changeText {
+		display: grid;
+		border-radius: 10px;
+		width: 40vw;
+		top: 15vh;
+		left: 30vw;
+		padding: 30px;
+		box-shadow: 3px 5px 10px 3px gray;
+	}
+	
+	.changeText {
+		grid-template-areas: "changeTitle changeTitle" "changeInput changeInput" "sendChange close";
+	}
+	
+	.warningTitle, .changeTitle {
+		font-size: 8vmin;
+		margin: 0;
+	}
+	
+	.changeText .close {
+		justify-self: left;
+		margin-left: 5px;
+	}
+	
+	.changeInput {
+		font-size: 3vmin;
+	}
+	
+	.close, .sendChange {
+		font-size: 4vmin;
+	}
+	
+	.sendChange {
+		justify-self: right;
+		margin-right: 5px;
+	}
+}
+
+@media screen and (max-width: 600px), screen and (max-height: 500px) {
+	/* small screen general */
+	
+	.playerCont {
+		font-size: 0.8em;
+		text-align: left;
+	}
+	
+	.playerCont svg {
+		width: 0.8em;
+		height: 0.8em;
+	}
+	
+	#statusTitle {
+		text-align: left;
+		font-size: 0.8em;
+	}
+	
+	#chat {
+		justify-self: stretch;
+		align-self: stretch
+		gap: 2px;
+		padding: 1px;
+		grid-template-rows: 1em 1fr 1.5em 1.5em;
+		border-radius: 2px;
+		font-size: 0.8em;
+	}
+	
+	#chat button {
+		font-size: 1em;
+		font-weight: bold;
+		padding: 0 3px;
+	}
+	
+	.message h3, .message .messageContent {
+		margin: 1px;
+		margin-left: 4px;
+	}
+	
+	.warning, .changeText {
+		display: flex;
+		flex-direction: column;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		padding: 10px;
+	}
+	
+	.warningTitle, .changeTitle {
+		font-size: 1.4em;
+		margin: 0;
+	}
+	
+	.close, .sendChange {
+		font-size: 1.2em;
+	}
+	
+	.sendChange {
+		justify-self: center;
+	}
+}
+
+@media screen and (max-width: 600px) and (orientation: landscape), screen and (max-height: 500px) and (orientation: landscape) {
+	/* small screen landscape */
+	
+	#cont {
+		gap: 2px;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas:	"svgCont h1"
+								"svgCont player1Cont"
+								"svgCont player2Cont"
+								"svgCont statusTitle"
+								"svgCont chat";
+		grid-template-columns: 84vh 1fr;
+		grid-template-rows: auto auto auto auto 1fr;
+		width: 96vw;
+		height: 92vh;
+	}
+	
+	h1 {
+		text-align: left;
+		font-size: 1em;
+		margin: 0;
+	}
+	
+	#svgCont {
+		width: 84vh;
+		height: 96vh;
+		justify-self: stretch;
+		align-self: stretch;
+	}
+}
+
+@media screen and (max-width: 600px) and (orientation: portrait), screen and (max-height: 500px) and (orientation: portrait) {
+	/* small screen portrait */
+	#cont {
+		gap: 2px;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1em 1em 1em 1em auto 1fr;
+		grid-template-areas: "h1" "player1Cont" "player2Cont" "statusTitle" "svgCont" "chat";
+		width: 91vw;
+		height: 96vh;
+	}
+	
+	h1 {
+		text-align: center;
+		font-size: 1em;
+		margin: 0;
+	}
+	
+	#svgCont {
+		width: 91vw;
+		height: 104vw;
+		justify-self: center;
+	}
+}

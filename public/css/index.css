@@ -1,0 +1,67 @@
+* {
+	box-sizing: border-box;
+	font-family: "helvetica";
+}
+
+body {
+	display: grid;
+	justify-items: center;
+	background-color: royalblue;
+}
+
+h1 {
+	font-size: 1.8em;
+}
+
+button, a {
+	background-color: white;
+	border: solid 2px;
+	border-radius: 5px;
+	border-color: cornflowerblue darkblue darkblue cornflowerblue;
+	color: darkblue;
+	font-size: 1.1em;
+	padding: 5px 20px;
+	text-decoration: none;
+}
+
+#name {
+	display: none;
+	grid-template-areas: "h3 h3" "input nameSave";
+	grid-template-columns: 1fr auto;
+	gap: 5px;
+}
+
+#details {
+	display: none;
+	grid-template-areas: "h3 h3" "input input" "copy goto";
+	gap: 5px;
+}
+
+h2 {
+	font-size: 1.2em;
+	display: none;
+}
+
+h3 {
+	grid-area: h3;
+	font-size: 1.2em;
+	margin-top: 1.5em;
+	margin-bottom: 0;
+}
+
+input {
+	grid-area: input;
+	font-size: 1.1em;
+}
+
+#nameSave {
+	grid-area: nameSave;
+}
+
+#copy {
+	grid-area: copy;
+}
+
+#goto {
+	grid-area: goto;
+}

@@ -1,0 +1,166 @@
+* {
+	box-sizing: border-box;
+	font-family: "helvetica";
+}
+
+#cont {
+	display: grid;
+}
+
+h1 {
+	grid-area: h1;
+	color: royalblue;
+}
+
+.playerCont {
+	margin: 0;
+	color: royalblue;
+}
+
+.playerNumber {
+	font-weight: bold;
+}
+
+#player1Cont {
+	grid-area: player1Cont;
+}
+
+#player2Cont {
+	grid-area: player2Cont;
+}
+ 
+#statusTitle {
+	grid-area: statusTitle;
+	font-weight: normal;
+	color: royalblue;
+	margin: 0;
+}
+
+#svgCont {
+	grid-area: svgCont;
+}
+
+#svgCont > svg {
+	width: 100%;
+	height: 100%;
+}
+
+#chat {
+	display: grid;
+	grid-area: chat;
+	grid-template-areas: "usersCount usersCount" "messageCont messageCont" "inputCont inputCont" "changeName changeRoom";
+	border: solid 1px;
+	border-radius: 4px;
+	background-color: royalblue;
+}
+
+#usersCount {
+	grid-area: usersCount;
+	color: white;
+	
+}
+
+#messageCont {
+	grid-area: messageCont;
+	border: solid 2px;
+	background-color: white;
+	border-color: darkblue cornflowerblue cornflowerblue darkblue;
+	border-radius: 4px;
+	overflow-y: scroll;
+	display: flex;
+	flex-direction: column;
+}
+
+#inputCont {
+	grid-area: inputCont;
+	display: grid;
+	grid-template-columns: 1fr auto;
+	gap: 3px;
+}
+
+#changeName {
+	grid-area: changeName;
+}
+
+#changeRoom {
+	grid-area: changeRoom;
+}
+
+button {
+	background-color: white;
+	border-radius: 4px;
+	border-color: cornflowerblue darkblue darkblue cornflowerblue;
+	color: darkblue;
+}
+
+button:disabled {
+	border-color: lightgray gray gray lightgray;
+	color: grey;
+}
+
+input[type="text"] {
+	border-radius: 4px;
+	border-color: darkblue cornflowerblue cornflowerblue darkblue;
+}
+
+.message {
+	border: solid 1px;
+	margin: 2px 5px;
+	border-radius: 5px;
+}
+
+.message:nth-child(odd) {
+	background-color: gold;
+	border-color: lemonchiffon goldenrod goldenrod lemonchiffon;
+}
+
+.message:nth-child(even) {
+	background-color: orangered;
+	border-color: pink firebrick firebrick pink;
+}
+
+.warning, .changeText {
+	background-color: royalblue;
+	position: fixed;
+}
+
+.changeText {
+	grid-template-areas: "changeTitle changeTitle" "changeInput changeInput" "sendChange close";
+	align-items: center;
+}
+
+.changeTitle {
+	grid-area: changeTitle;
+}
+
+.warningContent, .changeInput {
+	font-weight: bold;
+	margin: 20px 0;
+}
+
+.close, .sendChange {
+	justify-self: center;
+	padding: 5px 10px;
+	font-weight: bold;
+}
+
+.changeText .close {
+	grid-area: close;
+}
+
+.changeInput {
+	grid-area: changeInput;
+}
+
+.sendChange {
+	grid-area: sendChange;
+}
+
+.error {
+	background-color: darkblue;
+	color: lemonchiffon;
+	font-weight: bold;
+	height: 100%;
+	text-align: center;
+	padding: 25%;
+}
