@@ -1,4 +1,6 @@
-			const name = "WSUserID@cn4game-WSRooms"
+			import {config} from "./config.js";
+
+			const name = "WSUserID@${config.wsClientStorageName}-WSRooms"
 			const newButton = document.querySelector("#new");
 			const status = document.querySelector("h2");
 			const nameDiv = document.querySelector("#name");
