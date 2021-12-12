@@ -122,17 +122,6 @@ class WSRooms extends EventEmitter {
 		});
 	}
 	
-	seeEverything() {
-		return {
-			wss: this.#wss,
-			rooms: this.#rooms,
-			users: this.#users,
-			connections: this.#connections,
-			restrictToAllowedFunctions: this.#restrictToAllowedFunctions,
-			allowedFunctions: this.#allowedFunctions
-		}
-	}
-	
 	newUser(name, metadata={}) {
 		if (name === true) name = uuidv4();
 		if (name in this.#users) return false;
